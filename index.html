@@ -1,0 +1,132 @@
+<html><head>
+  
+ <meta http-equiv="Content-Type" content="text/html"; charset="utf-8"> 
+
+  <title>Exercicio - Arquitetura de computadores</title>
+  
+</head>
+
+<body style="font-family: Arial";>
+
+<h1 style="font-family: Arial; text-align: left;">Gustavo Peixinho 416105822</h1>
+
+<br>
+
+<div style="font-family: Arial; text-align: justify;">
+
+<p>Este Site foi criado com o Microsoft Azure, com o deploy sincronizado via Github; serviço de Web Apps; com o plano free, via conta do Microsoft DreamSpark
+
+</p>
+<br>
+
+<br>
+<br>
+	<div style="margin-left: 100px; text-align:center;"><h2> Redes neurais Artificiais  </h2></b> <br>
+	</div>
+	<div style ="text-align:justify"><p> Conhecidas como RNAs, são modelos computacionais que tentam imitar
+	o esquema de aprendizado de um sistema nervoso muito simples em vista dos que encontramos na natureza,
+	estas redes artificiais têm larga aplicação no mundo moderno, tais como reconhecimento de face e de digitais.
+	</p>
+	<p> De todos os modelos de redes neurais existentes, todos compartilham algo em comum: Sua extrema eficiência, tanto
+	em problemas de classificação binária, ou previsões de clima, de modo como nenhum outro método consegue fazer. 
+	Porém, todas compartilham do mesmo mistério: Ainda não é sabido totalmente como se controla uma rede neural, pois seu processamento
+	é muito obscuro e quase incompreensível para os humanos, por isso, seus resultados podem gerar facilmente um <i> Overfitting </i>.
+	<br>
+	<br>
+	<h3> Overfitting </h3>
+	<br>
+	<p> Overfitting, segundo PUGET (2006), é toda situação em que o modelo aprende demais, ou seja, ele captura detalhes muito específicos de cada caso,
+	fazendo com que os resultados sobre os dados de treino do modelo sejam simplesmente fantásticos (como a precisão de 100% para todas as classes-alvo).
+	Porém, quando se almeja aplicar o modelo treinado sobre dados novos, o algoritmo não consegue performar de forma adequada.</p>
+	<p> As redes neurais sofrem desse mal por serem difíceis de controlar, basicamente porque elas aprendem em ciclos fechados, denominados de épocas.
+	Em cada época os dados chegam pela camada de entrada, são processados na camada intermediária e os neurônios desta aprendem com exemplos, depois de
+	concluir o processamento, ela faz uma média de seu desempenho nesta época. Os neurônios que tomaram conclusões certas "ganham" pontos, enquanto os que erraram
+	"perdem" estes pontos. O processo se repete até que o número de épocas determinado na criação da rede chegue ao fim.</p>
+	<p> Se haverem muitas épocas, a rede neural assimilará de forma muito específica o problema que fora determinado nos dados de treino, quando o correto é que a rede
+	assimile até os dados mais importantes e consiga performar bem nos dados de teste, deixando-a mais generializada e abstrata. </p>
+	
+	
+	<br>
+	<div style = "text-align: center">
+	<img src = "imagens/redeneural.jpg" width="700px" align ="center"/>
+	<p> Exemplo de rede neural simples, aprendizado excessivo pode gerar Overfitting </p>
+	</div>
+	
+	<br>
+	<h3> Taxa de aprendizado</h3>
+	<br>
+	<br>
+	<p>Segundo <i>MOREIRA ET AL (1995)</i>, A taxa de aprendizado é o quanto de atualização de peso que cada neurônio irá tomar quando errar em seu processamento em uma 
+	situação particular. O valor deste hiper-parâmetro deve ser alto o suficiente para garantir uma boa velocidade no processo de fluxo da rede, e baixo o suficiente 
+	para que não haja um aprendizado excessivo.</p>
+	<p> Uma boa analogia para redes neurais e esta taxa é analisar um grupo de alunos que estão estudando para uma prova, caso ele tente aprender pouco e não se atentar com o que é mais importante
+	o aprendizado será rápido, eles ficarão pouquíssimo tempo estudando, porém não irão assimilar muito e não terão um desempenho satisfatório na prova.
+	Por outro lado, se estudarem demais, além de ficar muito tempo sob os livros, correrão o risco de aprender tantos detalhes específicos que serão inúteis para a prova. </p>
+	
+	<div style = "text-align: center">
+	<img src = "imagens/overfitting.jpg" align ="center"/>
+	<p> É possível ver que enquanto mais atualizações de pesos (Taxa de aprendizado mais alta) a taxa de erros
+nos dados de treino tende a diminuir até perto de zero, porém os erros nos dados de validação (teste) tende a aumentar quando o número de atualizações passa dos milhares</p>
+	</div>
+	<br>
+	<br>
+	<h3> Perceptron : Aprendizado baseado em erros </h3>
+	
+	<br>
+	<br>
+<p> Na década de 50, Frank Rosenblatt da Universidade de Cornell, criou uma rede de vários neurônios baseados no comportamento da retina humana. 
+	Era uma máquina enorme criada especificamente para o sistema de redes neurais. Essa rede tinha o poder apenas de emitir saídas binárias para os problemas
+que lhe eram propostos, ao contrário de toda a computação conhecida, o perceptron era capaz de aprender com seus próprios erros, porém apenas percorria em um sentido.
+Ou seja, o estímulo vinha da camada de entrada, percorria a camada oculta e ia para a de saída. Processo conhecido como alimentação linear. </p>
+
+<p> O perceptron então foi integrado com o algoritmo de alimentação retroativa de multíplas camadas ( Back-propagation Multilayer Perceptron).
+Este permitia que a rede se adaptasse de forma mais eficiente para os problemas que lhe eram apresentados, conseguindo performar soluções próprias para estes problemas. </p>
+
+<p> Para resumir esse processo, podemos imaginar três grupos de estudantes de informática procurando passar em uma prova de programação. 
+O primeiro grupo, é responsável por distribuir para a próxima equipe os estímulos externos, neste exemplo, a primeira camada entrega uma prova completamente respondida (dados de treino) para a próxima camada. 
+A segunda camada por sua vez, é responsável por aprender por meio de exemplos, cada estudante (neurônio) sendo responsável por uma questão e tentando resolvê-la, cada estudante faz suas tarefas de forma paralela, até que eles acabem e entreguem seus resultados
+para o último grupo de estudantes.</p>
+
+<p> Este último grupo pega todas as questões respondidas pelos neurônios e compara com as respostas certas do primeiro grupo, os estudantes do segundo grupo que acertaram as perguntas são premiados
+e os que erraram; são penalizados. Sabendo o que erraram na primeira sessão de estudos (época), eles irão evitar o erro que cometeram na próxima sessão, mantendo seus acertos. 
+A taxa de aprendizado deles, ou seja, o que eles podem-se corrigir tem um valor em porcentagem limitado. No momento que os estudantes do segundo grupo
+conseguirem passar com média 8 nas provas, o processo de aprendizado termina e os três grupos ficam prontos para uma nova prova semelhante, sem que 
+existam respostas certas previamente sabidas, ou seja, os estudantes terão que provar o quanto aprenderam no conjunto de sessões.</p>
+
+
+<div style = "text-align: center">
+	<img src = "imagens/percep.jpg" align ="center"/>
+	<p>A máquina perceptron</p>
+	</div>
+
+<h3> Conclusão </h3>
+
+Como pôde-se ver, embora que seja um processo obscuro e que é até hoje objeto de pesquisa entre os especialistas de inteligência artificial; as redes neurais
+promovem o fascínio por sua capacidade única de criar soluções criativas, rápidas e automatizadas para os mais diversos problemas que a computação tradicional,
+não conseguem resolver por si. Estes modelos têm suas limitações como o aprendizado excessivo e a baixa velocidade de processamento, que são contornáveis
+a partir da análise gráfica de seus resultados, em busca do ponto ideal de seus parâmetros, como a taxa de aprendizado. 
+Também foi constatado que um conceito de 1950 ainda é amplamente usado para a solução destes problemas, sendo que o perceptron ainda é um método robusto
+e preciso para previsões de séries temporais ou simples problemas de classificação binária.
+
+<h4> Fontes </h4>
+
+<a HREF="http://images.slideplayer.com.br/2/347863/slides/slide_53.jpg"> http://images.slideplayer.com.br/2/347863/slides/slide_53.jpg </a>
+
+<br>
+<a HREF="
+https://www.ibm.com/developerworks/community/blogs/jfp/entry/Overfitting_In_Machine_Learning?lang=en"> 
+https://www.ibm.com/developerworks/community/blogs/jfp/entry/Overfitting_In_Machine_Learning?lang=en </a>
+<br>
+<a HREF="https://imasters.com.br/front-end/javascript/redes-neurais-em-javascript/?trace=1519021197&source=single"> https://imasters.com.br/front-end/javascript/redes-neurais-em-javascript/?trace=1519021197&source=single </a>
+<br>
+<a HREF="http://publications.idiap.ch/downloads/reports/1995/95-04.pdf"> http://publications.idiap.ch/downloads/reports/1995/95-04.pdf </a>
+
+	
+	
+	
+<br>
+<br>
+
+
+
+</body></html>
